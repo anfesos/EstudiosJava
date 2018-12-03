@@ -1,10 +1,9 @@
-package Objetos;
+package objetos;
 import Clases.Personas.*;
 
 public class PersonaPrueba {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		System.out.println("Valores por defecto del objeto Persona");
 		Persona p1 = new Persona();

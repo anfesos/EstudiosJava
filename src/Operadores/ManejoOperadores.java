@@ -3,7 +3,7 @@ package Operadores;
 public class ManejoOperadores {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		System.out.println("Operadores Aritmeticos:");
         int a = 1 + 2;
         int b = a * 4;
@@ -53,7 +53,9 @@ public class ManejoOperadores {
         System.out.println("min = " + min);
 
         System.out.println("\nOperador de Asignación:");
-        int i, j, k;
+        int i;
+        int j;
+        int k;
         //cadena de asignación
         i = j = k = 100; // valor de x, y, and z igual a 100
         System.out.println("i = " + i);
