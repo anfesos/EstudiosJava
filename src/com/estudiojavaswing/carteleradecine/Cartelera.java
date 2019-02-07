@@ -1,6 +1,8 @@
 package com.estudiojavaswing.carteleradecine;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.*;
 
 import javax.swing.*;
@@ -41,7 +43,70 @@ public class Cartelera extends JFrame {
 	}
 
 	private void iniciarComponentes() {
+		
+		//Barra de Menús
+		JMenuBar menuBar = new JMenuBar();
+		this.setJMenuBar(menuBar);
+		
+		//Menú colocado en la barra de Menús
+		JMenu menu1 = new JMenu("Menu 1"); //Texto, icono, texto + icono
+		menuBar.add(menu1);
+		
+		//Colocar un Items dentro del menú
+		JMenuItem item = new JMenuItem("Item"); //Texto, icono, texto + icono
+		menu1.add(item);
+		
+		//Separación entre JMenuItems
+		menu1.addSeparator();
+		
+		//Submenu
+		
+		JMenu subMenu = new JMenu("SubMenu");
+		menu1.add(subMenu);
+		
+		JMenuItem itemSubMenu = new JMenuItem("Item del Submenú");
+		subMenu.add(itemSubMenu);
+		
+		//Checkbox dentro del sub menu
+		JCheckBoxMenuItem check = new JCheckBoxMenuItem("CheckBox");
+		subMenu.add(check);
+		
+		//Separador
+		subMenu.addSeparator();
+		
+		//RadioButton dentro del submenu
+		ButtonGroup grupo = new ButtonGroup();
+		JRadioButtonMenuItem radio = new JRadioButtonMenuItem("RadioButton 1");
+		subMenu.add(radio);
+		grupo.add(radio);
+		
+		JRadioButtonMenuItem radio2 = new JRadioButtonMenuItem("RadioButton 2");
+		subMenu.add(radio2);
+		grupo.add(radio2);
+		
+		
+		//Separación entre JMenuItems
+		menu1.addSeparator();
+		
+		//Item con acción Salir
+		Image iconoSalir = new ImageIcon("images/icons/salir.png").getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+		
+		JMenuItem salirItem = new JMenuItem("Salir", new ImageIcon(iconoSalir));
+		menu1.add(salirItem);
+		
+		//Acción del ItemSalir
+		salirItem.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				System.exit(0); //0 indica una salida correcta
+				
+			}
+			
+		});
+		
+		
 		// Panel de Fondo
 		panelPrincipal = new JPanel();
 		panelPrincipal.setBackground(Color.RED);
@@ -68,10 +133,10 @@ public class Cartelera extends JFrame {
 
 		peliculas = new Pelicula[4];
 
-		peliculas[0] = new Pelicula("Harry Potter: La piedra Filosofal", "Fantasia", "harryPotterFilosofal.jpg");
-		peliculas[1] = new Pelicula("Harry Potter: La orden del Fenix", "Fantasia", "harryPotterOrdenDelFenix.jpg");
-		peliculas[2] = new Pelicula("Iron Man 3", "Acción", "ironMan3.jpg");
-		peliculas[3] = new Pelicula("Spiderman", "Acción", "spiderman.jpg");
+		peliculas[0] = new Pelicula("Harry Potter: La piedra Filosofal", "Fantasia", "images/movies/harryPotterFilosofal.jpg");
+		peliculas[1] = new Pelicula("Harry Potter: La orden del Fenix", "Fantasia", "images/movies/harryPotterOrdenDelFenix.jpg");
+		peliculas[2] = new Pelicula("Iron Man 3", "Acción", "images/movies/ironMan3.jpg");
+		peliculas[3] = new Pelicula("Spiderman", "Acción", "images/movies/spiderman.jpg");
 
 	}
 
