@@ -37,7 +37,7 @@ public class ManejoPersonas {
 			//si algo falla no se realizan los cambios en la BD
 			
 			//Cambio correcto
-			personas.update(3, "Catalina", "Sossa");
+			//personas.update(3, "Catalina", "Sossa");
 			
 			//Provocamos un error superando los 45 caracteres
 			//personas.insert("Miguel", "Ayalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
